@@ -25,10 +25,6 @@
     transition: 0.2s;
 }
 
-.exploreMenuList img:hover {
-    opacity: 80%;
-}
-
 .exploreMenuListItem p {
     margin-top: 10px;
     color: #747474;

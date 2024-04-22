@@ -1,7 +1,6 @@
 import React from "react";
 import "./ExploreMenu.css";
-import { menuList } from "../../../public/images/assets";
-
+import { menu_list } from "../../../public/images/assets";
 const ExploreMenu = ({ category, setCategory }) => {
   return (
     <>
@@ -11,23 +10,23 @@ const ExploreMenu = ({ category, setCategory }) => {
           Choose from a diverse menu items,featuring the delectable array
         </p>
         <div className="exploreMenuList">
-          {menuList.map((item, index) => {
+          {menu_list.map((item, index) => {
             return (
               <div
                 key={index}
                 onClick={() =>
                   setCategory((prev) =>
-                    prev === item.menuName ? "All" : item.menuName
+                    prev === item.menu_name ? "All" : item.menu_name
                   )
                 }
                 className="exploreMenuListItem"
               >
                 <img
-                  className={category === item.menuName ? "active" : ""}
-                  src={item.menuImage}
+                  className={category === item.menu_name ? "active" : ""}
+                  src={item.menu_image}
                   alt="loading"
                 />
-                <p>{item.menuName}</p>
+                <p>{item.menu_name}</p>
               </div>
             );
           })}
